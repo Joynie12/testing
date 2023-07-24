@@ -1,0 +1,14 @@
+Все изображения взяты из открытого доступа. Для примера оформления файла прилагаю следующий ниже текст.
+
+Использованные изображения:
+1. Изображение "Visa Card" (c) Visa Inc. - Источник: https://www.example.com/visa-card.png
+   Лицензия: © Visa Inc. Все права защищены. Использование только с разрешения Visa Inc.
+
+2. Изображение "Mastercard Logo" (c) Mastercard International Incorporated - Источник: https://www.example.com/mastercard-logo.png
+   Лицензия: © Mastercard International Incorporated. Все права защищены. Использование только с разрешения Mastercard International Incorporated.
+
+3. Изображение "Amex Card" (c) American Express Company - Источник: https://www.example.com/amex-card.png
+   Лицензия: © American Express Company. Все права защищены. Использование только с разрешения American Express Company.
+
+4. Изображение "Discover Card" (c) Discover Financial Services - Источник: https://www.example.com/discover-card.png
+   Лицензия: © Discover Financial Services. Все права защищены. Использование только с разрешения Discover Financial Services.
