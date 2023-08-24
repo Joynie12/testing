@@ -1,4 +1,9 @@
 import './styles.css';
+import visaImage from '../dist/images/card-visa.png';
+import mastercardImage from '../dist/images/card-mastercard.png';
+import amexImage from '../dist/images/card-amex.png';
+import discoverImage from '../dist/images/card-discover.png';
+import mirImage from '../dist/images/card-mir.png';
 
 function validateCardNumber(cardNumber) {
   const regex = /^[0-9]{16}$/;
@@ -27,19 +32,19 @@ function updateCardImageAndResult(paymentSystem) {
 
   switch (paymentSystem) {
     case 'Visa':
-      document.getElementById('visaCardImage').src = './images/card-visa.png';
+      document.getElementById('visaCardImage').src = visaImage;
       break;
     case 'Mastercard':
-      document.getElementById('mastercardCardImage').src = './images/card-mastercard.png';
+      document.getElementById('mastercardCardImage').src = mastercardImage;
       break;
     case 'Amex':
-      document.getElementById('amexCardImage').src = './images/card-amex.png';
+      document.getElementById('amexCardImage').src = amexImage;
       break;
     case 'Discover':
-      document.getElementById('discoverCardImage').src = './images/card-discover.png';
+      document.getElementById('discoverCardImage').src = discoverImage;
       break;
     case 'Mir':
-      document.getElementById('mirCardImage').src = './images/card-mir.png';
+      document.getElementById('mirCardImage').src = mirImage;
       break;
     case 'Unknown':
     default:
@@ -54,6 +59,9 @@ function updateCardImageAndResult(paymentSystem) {
   resultMessage.textContent = `Payment system: ${paymentSystem}`;
 }
 
+// Вызываем функцию updateCardImageAndResult, чтобы установить изображения до ввода номера карты
+updateCardImageAndResult('Unknown');
+
 function handleValidation() {
   const cardNumberInput = document.getElementById('cardNumberInput');
   const cardNumber = cardNumberInput.value;
@@ -65,6 +73,5 @@ function handleValidation() {
   updateCardImageAndResult(paymentSystem);
 }
 
-// Добавляем обработчик события на кнопку "Validate" для выполнения валидации при нажатии на кнопку
 const validateButton = document.getElementById('validateButton');
 validateButton.addEventListener('click', handleValidation);
