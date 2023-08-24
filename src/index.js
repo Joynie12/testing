@@ -1,9 +1,9 @@
 import './styles.css';
-import visaImage from '/images/card-visa.png';
-import mastercardImage from '/images/card-mastercard.png';
-import amexImage from '/images/card-amex.png';
-import discoverImage from '/images/card-discover.png';
-import mirImage from '/images/card-mir.png';
+import visaImage from '//images/card-visa.png';
+import mastercardImage from '//images/card-mastercard.png';
+import amexImage from '//images/card-amex.png';
+import discoverImage from '//images/card-discover.png';
+import mirImage from '//images/card-mir.png';
 
 function validateCardNumber(cardNumber) {
   const regex = /^[0-9]{16}$/;
