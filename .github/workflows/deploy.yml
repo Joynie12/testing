@@ -1,33 +1,23 @@
-name: Netology AHJ
+name: Netology AHJ Deployment
 
-on: [push, pull_request]
-
-# Down scope as necessary via https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
-permissions:
-  checks: write
-  contents: write
-  pages: write
-  id-token: write
-  deployments: write
+on:
+  push:
+    branches:
+      - main # Здесь укажите вашу основную ветку
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    strategy:
-      matrix:
-        node-version: [18.x]
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2 # Обновил до версии 2
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v2 # Обновил до версии 2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14 # Версия Node.js, которая вам нужна
 
       - name: Install dependencies
         run: npm install
@@ -41,14 +31,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: 'dist'
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+        uses: peaceiris/actions-gh-pages@v3 # Обновил до версии 3
+        with:
+          deploy_key: ${{ secrets.k2cwOAMKvceBO32HeBWBOSmOTn1O02bnnJn1+ZwSXZM }}
