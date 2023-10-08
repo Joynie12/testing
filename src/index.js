@@ -48,7 +48,7 @@ function updateCardImageAndResult(paymentSystem) {
       break;
     case 'Unknown':
     default:
-      document.getElementById('visaCardImage').src = '';
+      document.getElementById('visaCardImage').src = visaImage;
       document.getElementById('mastercardCardImage').src = '';
       document.getElementById('amexCardImage').src = '';
       document.getElementById('discoverCardImage').src = '';
