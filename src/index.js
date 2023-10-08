@@ -30,6 +30,11 @@ function getPaymentSystem(cardNumber) {
 function updateCardImageAndResult(paymentSystem) {
   const resultMessage = document.getElementById('resultMessage');
 
+  const allImages = document.querySelectorAll('.card-image img');
+  allImages.forEach(image => {
+    image.style.border = 'none';
+  });
+
   switch (paymentSystem) {
     case 'Visa':
       document.getElementById('visaCardImage').src = visaImage;
