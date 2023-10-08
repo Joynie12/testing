@@ -49,10 +49,10 @@ function updateCardImageAndResult(paymentSystem) {
     case 'Unknown':
     default:
       document.getElementById('visaCardImage').src = visaImage;
-      document.getElementById('mastercardCardImage').src = '';
-      document.getElementById('amexCardImage').src = '';
-      document.getElementById('discoverCardImage').src = '';
-      document.getElementById('mirCardImage').src = '';
+      document.getElementById('mastercardCardImage').src = mastercardImage;
+      document.getElementById('amexCardImage').src = amexImage;
+      document.getElementById('discoverCardImage').src = discoverImage;
+      document.getElementById('mirCardImage').src = mirImage;
       break;
   }
 
