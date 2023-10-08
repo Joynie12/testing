@@ -33,18 +33,23 @@ function updateCardImageAndResult(paymentSystem) {
   switch (paymentSystem) {
     case 'Visa':
       document.getElementById('visaCardImage').src = visaImage;
+      document.getElementById('visaCardImage').style.border = `2px solid var(--button-color)`;
       break;
     case 'Mastercard':
       document.getElementById('mastercardCardImage').src = mastercardImage;
+      document.getElementById('mastercardCardImage').style.border = `2px solid var(--button-color)`;
       break;
     case 'Amex':
       document.getElementById('amexCardImage').src = amexImage;
+      document.getElementById('amexCardImage').style.border = `2px solid var(--button-color)`;
       break;
     case 'Discover':
       document.getElementById('discoverCardImage').src = discoverImage;
+      document.getElementById('discoverCardImage').style.border = `2px solid var(--button-color)`;
       break;
     case 'Mir':
       document.getElementById('mirCardImage').src = mirImage;
+      document.getElementById('mirCardImage').style.border = `2px solid var(--button-color)`;
       break;
     case 'Unknown':
     default:

@@ -47,10 +47,14 @@ input[type="text"] {
   border-radius: 4px;
 }
 
+:root {
+  --button-color: #4CAF50; /* Определяем переменную --button-color */
+}
+
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: var(--button-color);
   color: white;
   border: none;
   border-radius: 4px;
