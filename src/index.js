@@ -4,6 +4,7 @@ import mastercardImage from './images/card-mastercard.png';
 import amexImage from './images/card-amex.png';
 import discoverImage from './images/card-discover.png';
 import mirImage from './images/card-mir.png';
+import nonameCard from './images/nonameCard.jpg';
 
 function validateCardNumber(cardNumber) {
   const regex = /^[0-9]{16}$/;
@@ -48,11 +49,11 @@ function updateCardImageAndResult(paymentSystem) {
       break;
     case 'Unknown':
     default:
-      document.getElementById('visaCardImage').src = visaImage;
-      document.getElementById('mastercardCardImage').src = mastercardImage;
-      document.getElementById('amexCardImage').src = amexImage;
-      document.getElementById('discoverCardImage').src = discoverImage;
-      document.getElementById('mirCardImage').src = mirImage;
+      document.getElementById('visaCardImage').src = nonameCard;
+      document.getElementById('mastercardCardImage').src = nonameCard;
+      document.getElementById('amexCardImage').src = nonameCard;
+      document.getElementById('discoverCardImage').src = nonameCard;
+      document.getElementById('mirCardImage').src = nonameCard;
       break;
   }
 
